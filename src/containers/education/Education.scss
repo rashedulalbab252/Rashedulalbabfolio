@@ -1,0 +1,76 @@
+@import "../../_globalColor";
+
+.education-heading {
+  font-family: "Outfit", sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #1a1a1a !important;
+  line-height: 1.2;
+  letter-spacing: -1px;
+
+  // Create a gradient for the primary text
+  background: linear-gradient(135deg, $main-color 0%, #ff8c00 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  width: 100%;
+}
+
+.education-section {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 80px 20px 40px;
+  margin: 0px auto;
+  position: relative;
+}
+
+.education-section>* {
+  flex: 1;
+  // margin-bottom: 30px;
+}
+
+.education-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (max-width: 1380px) {
+  .education-card-container {
+    padding-top: 0px;
+  }
+
+  .education-heading {
+    font-size: 45px;
+  }
+
+  .education-text-subtitle {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .education-card-container {
+    padding-top: 0px;
+  }
+
+  .education-heading {
+    font-size: 36px;
+  }
+
+  .education-text-subtitle {
+    font-size: 16px;
+  }
+
+  .education-section {
+    padding: 60px 10px 20px;
+  }
+}

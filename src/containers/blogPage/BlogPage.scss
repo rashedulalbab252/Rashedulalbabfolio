@@ -1,0 +1,42 @@
+@import "../../_globalColor";
+
+.blog-page-main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-page-container {
+    padding: 40px 10%;
+    flex: 1;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    color: $main-color;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 30px;
+    transition: transform 0.2s;
+
+    &:hover {
+        transform: translateX(-5px);
+    }
+}
+
+.dark-mode {
+    .back-btn {
+        color: $main-color;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-page-container {
+        padding: 20px 5%;
+    }
+}

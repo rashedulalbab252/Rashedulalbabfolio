@@ -1,0 +1,442 @@
+@import "../../_globalColor";
+
+.hierarchical-projects-main {
+    width: 90%;
+    padding: 20px 10px;
+    margin: 0px auto;
+    margin-top: 4rem;
+}
+
+.hierarchical-container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin-top: 50px;
+}
+
+/* Category Section */
+.category-section {
+    position: relative;
+    padding-left: 0;
+}
+
+.category-header {
+    position: relative;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.category-line {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(135deg, $main-color 0%, #ff9d00 100%);
+    border-radius: 2px;
+}
+
+.category-title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-left: 80px;
+    background: $lightBackground2;
+    padding: 15px 20px 15px 80px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateX(10px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    }
+}
+
+.category-title-wrapper.dark-mode {
+    background: $darkBackground;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+
+    &:hover {
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    }
+}
+
+.category-icon {
+    font-size: 28px;
+    color: $main-color;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+.category-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: $textColor;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.category-title.dark-mode {
+    color: $textColorDark;
+}
+
+/* Projects List */
+.projects-list {
+    position: relative;
+    padding-left: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Connection Lines */
+.connection-wrapper {
+    position: absolute;
+    left: -80px;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.vertical-line {
+    position: absolute;
+    left: 0;
+    top: -40px;
+    /* Start from top of previous item or category */
+    width: 2px;
+    height: calc(100% + 20px);
+    background: rgba($main-color, 0.3);
+    box-shadow: 0 0 10px rgba($main-color, 0.2);
+
+    &.last {
+        height: 50%;
+        border-bottom-left-radius: 20px;
+    }
+}
+
+.horizontal-line {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, rgba($main-color, 0.3) 0%, $main-color 100%);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Curve effect using a pseudo-element if needed, 
+   but for simplicity, we'll use straight lines with rounded junctions */
+
+.project-dot {
+    position: absolute;
+    left: 55px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background: #4fd1c5;
+    /* Teal/Cyan glow from image */
+    border-radius: 50%;
+    box-shadow: 0 0 12px #4fd1c5, 0 0 4px #4fd1c5;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.project-item:hover .project-dot {
+    transform: translateY(-50%) scale(1.5);
+    box-shadow: 0 0 20px #4fd1c5, 0 0 8px #4fd1c5;
+}
+
+/* Project Card */
+.hierarchical-project-card {
+    flex: 1;
+    background: transparent;
+    border-radius: 0;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: none;
+
+    &:hover {
+        transform: translateX(10px);
+    }
+}
+
+.hierarchical-project-card.dark-mode {
+    background: transparent;
+    box-shadow: none;
+}
+
+.project-name {
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: $textColor;
+    margin: 0;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.project-name.dark-mode {
+    color: #e2e8f0;
+    /* Light gray from image */
+}
+
+.hierarchical-project-card:hover .project-name {
+    color: #4fd1c5;
+    text-shadow: 0 0 8px rgba(79, 209, 197, 0.4);
+}
+
+.project-description {
+    display: none;
+    /* In the image, it looks like just titles are listed in the tree */
+}
+
+/* Social links hidden or simplified for the tree view to match image */
+.project-links {
+    display: none;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, $main-color 0%, #ff9d00 100%);
+    color: white;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba($main-color, 0.4);
+    }
+}
+
+.project-link.dark-mode {
+    background: linear-gradient(135deg, $main-color 0%, #ff9d00 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 1380px) {
+    .hierarchical-projects-main {
+        width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hierarchical-projects-main {
+        width: 100%;
+        padding: 20px 15px;
+        margin-top: 2rem;
+    }
+
+    .hierarchical-container {
+        gap: 40px;
+    }
+
+    .category-title-wrapper {
+        padding: 12px 15px 12px 70px;
+    }
+
+    .category-line {
+        width: 50px;
+    }
+
+    .category-icon {
+        font-size: 22px;
+    }
+
+    .category-title {
+        font-size: 20px;
+    }
+
+    .projects-list {
+        padding-left: 60px;
+        gap: 25px;
+    }
+
+    .connection-wrapper {
+        width: 50px;
+    }
+
+    .horizontal-line {
+        width: 30px;
+    }
+
+    .project-dot {
+        left: 28px;
+        width: 10px;
+        height: 10px;
+    }
+
+    .hierarchical-project-card {
+        padding: 20px;
+    }
+
+    .project-name {
+        font-size: 18px;
+    }
+
+    .project-description {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-title-wrapper {
+        padding: 10px 12px 10px 60px;
+    }
+
+    .category-line {
+        width: 40px;
+    }
+
+    .category-icon {
+        font-size: 20px;
+    }
+
+    .category-title {
+        font-size: 18px;
+    }
+
+    .projects-list {
+        padding-left: 40px;
+    }
+
+    .connection-wrapper {
+        width: 40px;
+    }
+
+    .horizontal-line {
+        width: 25px;
+    }
+
+    .project-dot {
+        left: 23px;
+    }
+
+    .hierarchical-project-card {
+        padding: 15px;
+    }
+
+    .project-name {
+        font-size: 16px;
+    }
+
+    .project-description {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .project-link {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+}
+
+.view-more-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 80px;
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba($main-color, 0.03);
+    border: 1px dashed rgba($main-color, 0.2);
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: rgba($main-color, 0.05);
+        border-color: rgba($main-color, 0.4);
+    }
+}
+
+.view-more-text {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 25px;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.view-more-text.dark-mode {
+    color: #94a3b8;
+}
+
+.view-more-button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 35px;
+    background: $main-color;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 25px rgba($main-color, 0.3);
+
+    i {
+        font-size: 22px;
+    }
+
+    &:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 15px 35px rgba($main-color, 0.5);
+        background: darken($main-color, 5%);
+    }
+
+    &:active {
+        transform: translateY(-2px);
+    }
+}
+
+@media (max-width: 768px) {
+    .view-more-container {
+        margin-top: 50px;
+        padding: 30px 20px;
+    }
+
+    .view-more-text {
+        font-size: 16px;
+    }
+
+    .view-more-button {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 25px;
+        font-size: 16px;
+    }
+}

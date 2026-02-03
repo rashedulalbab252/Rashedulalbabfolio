@@ -1,0 +1,512 @@
+@import "../../_globalColor";
+
+.main {
+  width: 90%;
+  padding: 20px 10px;
+  margin: 0px auto;
+  margin-top: 0;
+}
+
+.greet-main {
+  width: 90%;
+  padding: 10px 10px;
+  margin: 0px auto;
+  /* Make sure it takes full height minus header */
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+
+.greeting-text-div {
+  z-index: 5;
+  position: relative;
+}
+
+.subTitle {
+  color: $subTitle !important;
+}
+
+.greeting-main {
+  display: flex;
+}
+
+.greeting-main>* {
+  flex: 1;
+  margin-bottom: 30px;
+}
+
+.empty-div {
+  margin-bottom: 40px;
+}
+
+/* Inner text container */
+.greeting-text-div>div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  /* Reduced from 10px */
+  align-items: flex-start;
+  /* Align contents to start */
+}
+
+/* Ensure centering on mobile */
+@media (max-width: 768px) {
+  .greeting-text-div>div {
+    align-items: center;
+  }
+}
+
+.button-greeting-div {
+  display: flex;
+  margin-top: 10px;
+  /* Reduced from 40px */
+  gap: 20px;
+}
+
+.download-link-button {
+  text-decoration: none;
+}
+
+.greeting-text {
+  font-family: "Outfit", sans-serif;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #1a1a1a !important;
+  text-align: left;
+  margin-bottom: 25px;
+  letter-spacing: -2px;
+
+  .name-gradient {
+    background: linear-gradient(135deg, $main-color 0%, #ff8c00 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.dark-mode.greeting-text {
+  color: white !important;
+
+  .name-gradient {
+    background: linear-gradient(135deg, $main-color 0%, #ff9d00 50%, #ffffff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Remove filter from here as it can break background-clip: text in some browsers */
+  }
+}
+
+.greeting-text-div {
+  z-index: 5;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba($main-color, 0.1) 0%, transparent 70%);
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+
+.dark-mode.greeting-text {
+  color: white !important;
+}
+
+.greeting-text-p {
+  font-family: "Inter", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: left;
+  white-space: pre-wrap;
+  color: #333333 !important; // Darker and cleaner
+  margin-top: 10px;
+  max-width: 800px;
+
+  .highlight {
+    color: #000000;
+    font-weight: 700; // Bolder for high-impact
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      width: 100%;
+      height: 8px;
+      background: rgba($main-color, 0.12);
+      z-index: -1;
+      border-radius: 2px;
+    }
+  }
+
+  .highlight-alt {
+    color: $main-color;
+    font-weight: 700;
+  }
+}
+
+.dark-mode.greeting-text-p {
+  color: rgba(255, 255, 255, 0.7) !important;
+
+  .highlight {
+    color: #ffffff;
+
+    &::after {
+      background: rgba($main-color, 0.25);
+    }
+  }
+}
+
+.greeting-image-div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-photo-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-photo {
+  max-width: 95%;
+  height: auto;
+  z-index: 2;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4));
+  animation: float 6s ease-in-out infinite;
+  /* Blend the bottom of the image */
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  margin-top: -80px;
+}
+
+/* Simple, clean frame */
+.photo-bg-blob {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 106, 0, 0.3);
+  /* Subtle orange border */
+  background: radial-gradient(circle, rgba(255, 106, 0, 0.05) 0%, transparent 70%);
+  /* Subtle inner glow */
+  z-index: 1;
+  box-shadow: 0 0 20px rgba(255, 106, 0, 0.1);
+}
+
+.photo-bg-blob::after {
+  display: none;
+}
+
+.photo-bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.circle-1 {
+  width: 100px;
+  height: 100px;
+  top: 10%;
+  right: 15%;
+  animation: float-circle 8s ease-in-out infinite;
+}
+
+.circle-2 {
+  width: 60px;
+  height: 60px;
+  bottom: 20%;
+  left: 10%;
+  animation: float-circle 12s ease-in-out infinite reverse;
+}
+
+@keyframes morphing {
+  0% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+
+  25% {
+    border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+  }
+
+  50% {
+    border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+  }
+
+  75% {
+    border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+  }
+
+  100% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes float-circle {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(20px, -30px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.wave-emoji {
+  animation-duration: 1.8s;
+  animation-iteration-count: infinite;
+  animation-name: wave;
+  display: inline-block;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(-10deg);
+  }
+
+  20% {
+    transform: rotate(12deg);
+  }
+
+  30% {
+    transform: rotate(-10deg);
+  }
+
+  40% {
+    transform: rotate(9deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Hero Skills Section */
+.hero-skills-section {
+  margin: 30px 0;
+  width: 100%;
+}
+
+.hero-skills-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: $textColor;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, $main-color 0%, #ff8c42 100%);
+    border-radius: 2px;
+  }
+}
+
+.dark-mode.hero-skills-title {
+  color: white;
+}
+
+.hero-skills-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.hero-skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 10px;
+  background: white;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 106, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: default;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+  &:hover {
+    transform: translateY(-5px);
+    border-color: $main-color;
+    box-shadow: 0 8px 20px rgba(255, 106, 0, 0.2);
+
+    .hero-skill-icon {
+      transform: scale(1.2);
+      color: $main-color;
+    }
+  }
+}
+
+.dark-mode.hero-skill-item {
+  background: rgba(30, 30, 30, 0.6);
+  backdrop-filter: blur(10px);
+  border-color: rgba(255, 106, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+  &:hover {
+    border-color: $main-color;
+    box-shadow: 0 8px 20px rgba(255, 106, 0, 0.3);
+  }
+}
+
+.hero-skill-icon {
+  font-size: 28px;
+  color: #555;
+  transition: all 0.3s ease;
+}
+
+.dark-mode .hero-skill-icon {
+  color: #ffa366;
+}
+
+.hero-skill-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+}
+
+.dark-mode .hero-skill-name {
+  color: #e0e0e0;
+}
+
+/* Media Query */
+@media (max-width: 1380px) {
+  .greeting-text {
+    font-size: 50px;
+  }
+
+  .greeting-text-p {
+    font-size: 20px;
+  }
+
+  .hero-skills-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .button-greeting-div {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .greeting-text {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .greeting-text-p {
+    font-size: 16px;
+    line-height: normal;
+    text-align: center;
+  }
+
+  .greeting-main {
+    display: block;
+  }
+
+  .greeting-image-div {
+    height: 300px;
+    /* Slightly taller to fit the blob */
+  }
+
+  /* Adjust blob for mobile */
+  .photo-bg-blob {
+    width: 280px;
+    height: 280px;
+  }
+
+  .hero-skills-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .hero-skill-item {
+    padding: 12px 8px;
+  }
+
+  .hero-skill-icon {
+    font-size: 24px;
+  }
+
+  .hero-skill-name {
+    font-size: 12px;
+  }
+
+  .hero-skills-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .main {
+    width: auto;
+  }
+
+  .hero-skills-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+}

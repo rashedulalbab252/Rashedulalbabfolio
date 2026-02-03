@@ -1,0 +1,160 @@
+@import "../../_globalColor";
+
+.project-subtitle {
+  color: $subTitle !important;
+  font-size: 20px;
+  line-height: normal;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.project-title-center {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.projects-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.15), 0 5px 10px -5px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  padding: 1.5rem;
+  flex: 1 1 300px;
+  max-width: 450px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  border-left: 5px solid $main-color;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.25), 0 10px 20px -10px rgba(0, 0, 0, 0.1);
+
+    .card-title::after {
+      width: 100%;
+    }
+  }
+}
+
+.project-card-light {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 5px solid $main-color;
+}
+
+.project-card-dark.dark-mode {
+  background: $cardBackgroundDark !important;
+  border: 1px solid $cardBorderDark;
+  border-left: 5px solid $main-color;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 106, 0, 0.15);
+    border-color: rgba(255, 106, 0, 0.4);
+    transform: translateY(-8px);
+  }
+}
+
+.dark-mode.card-title,
+.dark-mode.card-subtitle {
+  background-color: transparent !important;
+}
+
+.project-detail {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1a202c;
+  position: relative;
+  display: block;
+  width: 100%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: $main-color;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+  }
+}
+
+.card-subtitle {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.project-card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+  justify-content: center;
+}
+
+.project-tag {
+  background-color: transparent;
+  color: #ff6a00;
+  border: 1.5px solid rgba(255, 106, 0, 0.3);
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.project-tag:hover {
+  background-color: #ff6a00;
+  color: #000;
+  box-shadow: 0 0 15px rgba(255, 106, 0, 0.4);
+}
+
+/* Dark mode overrides */
+.dark-mode.card-title {
+  color: white;
+}
+
+.dark-mode.card-subtitle {
+  color: #cbd5e0;
+}
+
+.dark-mode.project-tag {
+  background-color: $main-color;
+}
+
+@media (max-width: 768px) {
+  .project-subtitle {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+  }
+}

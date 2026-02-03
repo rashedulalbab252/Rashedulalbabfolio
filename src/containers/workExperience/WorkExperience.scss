@@ -1,0 +1,140 @@
+@import "../../_globalColor";
+
+.experience-main {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.experience-container {
+  display: flex;
+  width: 90%;
+  padding: 100px 20px 40px;
+  margin: 0px auto;
+  position: relative;
+  z-index: 1;
+  overflow: visible; // Allow glows and titles to breathe
+
+  // Background glow effect
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -100px;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba($main-color, 0.05) 0%, transparent 70%);
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+
+.experience-section-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.experience-heading {
+  font-family: "Outfit", sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #1a1a1a !important;
+  line-height: 1.5; // Normal line height to avoid clipping
+  letter-spacing: -1px;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+
+  .name-gradient {
+    background: linear-gradient(135deg, $main-color 0%, #ff8c00 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+}
+
+.dark-mode.experience-heading {
+  color: white !important;
+
+  .name-gradient {
+    background: linear-gradient(135deg, $main-color 0%, #ff9d00 50%, #ffffff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.experience-section {
+  margin-bottom: 80px; // Massive space between sections to prevent overlap
+  width: 100%;
+}
+
+.experience-section-title {
+  font-family: "Outfit", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 40px; // More space before cards
+  color: #333333;
+  position: relative;
+  text-align: center;
+  padding-bottom: 15px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: $main-color;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba($main-color, 0.4);
+  }
+}
+
+.dark-mode.experience-section-title {
+  color: #ffffff !important;
+}
+
+.experience-section {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  width: 100%;
+}
+
+.experience-cards-div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 1380px) {
+  .experience-heading {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .experience-cards-div {
+    grid-template-columns: 1fr; // Single column on small tablets
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-heading {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .experience-container {
+    padding: 30px 10px;
+    width: 95%;
+  }
+}

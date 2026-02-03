@@ -1,0 +1,89 @@
+/* Fusion Orange Theme */
+
+// button colors
+$main-color: #ff6a00;
+$buttonColor: #ff6a00;
+$buttonHover: #ff8c00;
+$topButtonHover: #ff6a00;
+
+// text colors light theme (Fallback)
+$titleColor: #0a0a0a;
+$textColor: #1a1a1a;
+$subTitle: #666e74;
+$cardSubtitle: #4a5568;
+$talkCardSubTitle: #4a5568;
+$blogCardTitleColor: #1a1a1a;
+
+// text color dark theme
+$textColorDark: #ffffff;
+$text-secondary-dark: rgba(255, 255, 255, 0.6);
+
+// toggle switch colors
+$toggleCheck: #ff6a00;
+$toggleSwitchSliderBG: #111;
+
+// githubRepo specific colors
+$githubRepoCardLanguageColorBG: #ff6a00;
+$githubRepoCardColor: rgba(255, 255, 255, 0.7);
+$githubRepoCardRepoCardStatsColor: rgba(255, 255, 255, 0.5);
+$githubRepoCardRepoNameColor: #ffffff;
+$githubProfileCardLocationTS: #ff6a00;
+$githubProfileCardBorder: #ff6a00;
+
+// light background colors
+$lightBackground1: #fff;
+$lightBackground2: #f8f9fa;
+$lightBackground3: #edf2f7;
+$blogCardContainerColor: #1a1a1a;
+
+// dark background colors
+$darkBackground: #000000;
+$cardBackgroundDark: rgba(255, 255, 255, 0.03);
+$cardBorderDark: rgba(255, 106, 0, 0.2);
+
+// light theme box shadows
+$lightBoxShadowDark: rgba(0, 0, 0, 0.1);
+$lightBoxShadow: rgba(0, 0, 0, 0.05);
+$lightBoxShadowDarker: rgba(0, 0, 0, 0.15);
+
+// dark theme box shadows
+$darkBoxShadow: rgba(255, 106, 0, 0.1);
+$darkBoxShadow2: rgba(255, 106, 0, 0.2);
+
+// linear gradients
+$experienceCardBlurredDivLG: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+$experienceCardBannerLG: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+$orangeGradient: linear-gradient(135deg, #ff6a00, #ff9d00);
+
+// borders
+$progressBarBackground: #1a1a1a;
+$lightBorder1: rgba(255, 255, 255, 0.1);
+$educationCardBorder: #ff6a00;
+
+// hovers
+$achievementCertificateCardHoverDark: rgba(255, 106, 0, 0.05);
+$blogCardHoverSmallColor: rgba(255, 255, 255, 0.9);
+$headerHoverBG: #080808;
+$contactDetailHoverTS: #ff6a00;
+
+// misc backgrounds
+$progressBarSpanBG: #ff6a00;
+$iconBackground: #111;
+$appHeaderBG: #000;
+
+// misc colors
+$skillsColor: #ff6a00;
+$appLink: #ff6a00;
+
+// social media icons
+$faceBook: #3b5998;
+$linkedin: #0e76a8;
+$github: #333;
+$gitlab: #fca326;
+$google: #ea4335;
+$twitter: #1da1f2;
+$medium: #fff;
+$stackoverflow: #f48024;
+$instagram: #c13584;
+$kaggle: #20beff;
+$researchgate: #00ccbb;

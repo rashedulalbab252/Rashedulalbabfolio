@@ -1,0 +1,59 @@
+@import "../../_globalColor";
+
+.main-button {
+  background: $orangeGradient;
+  border: none;
+  color: #000;
+  font-weight: 700;
+  width: max-content;
+  padding: 15px 35px;
+  /* margin-right: 50px; Removed for flex gap control */
+  text-transform: uppercase;
+  border-radius: 50px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 20px rgba(255, 106, 0, 0.2);
+  /* Mobile touch improvements */
+  -webkit-tap-highlight-color: rgba(255, 106, 0, 0.3);
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.main-button:hover,
+.main-button:active {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(255, 106, 0, 0.4);
+  filter: brightness(1.1);
+}
+
+.project-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.project-button>.main-button {
+  margin-right: 0 !important;
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+  .main-button {
+    font-size: 0.938rem;
+    padding: 12px 18px;
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 320px) {
+  .main-button {
+    font-size: 0.75rem;
+  }
+}

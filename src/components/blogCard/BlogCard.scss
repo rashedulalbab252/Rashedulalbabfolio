@@ -1,0 +1,149 @@
+@import "../../_globalColor";
+
+.blog-container {
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+    border-color: rgba($main-color, 0.3);
+
+    .blog-card-image {
+      transform: scale(1.08);
+    }
+
+    .blog-title {
+      color: $main-color;
+    }
+
+    .go-arrow {
+      transform: translateX(5px);
+    }
+  }
+}
+
+.blog-container.dark-mode {
+  background: rgba(25, 25, 25, 0.6);
+  backdrop-filter: blur(20px);
+  border-color: rgba(255, 255, 255, 0.05);
+
+  &:hover {
+    background: rgba(35, 35, 35, 0.8);
+    border-color: rgba(255, 106, 0, 0.4);
+    box-shadow: 0 0 50px rgba(255, 106, 0, 0.1);
+  }
+}
+
+.blog-card-image-container {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, transparent 40%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+}
+
+.blog-container:hover .blog-card-image-container::after {
+  opacity: 1;
+}
+
+.blog-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.blog-card-content {
+  padding: 25px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-title {
+  font-family: "Outfit", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.3;
+  margin: 0 0 12px 0;
+  transition: color 0.3s ease;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  overflow: hidden;
+}
+
+.dark-mode .blog-title {
+  color: #ffffff;
+}
+
+.blog-description {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #666;
+  margin: 0 0 20px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  overflow: hidden;
+  flex: 1;
+}
+
+.dark-mode .blog-description {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.blog-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding-top: 15px;
+}
+
+.dark-mode .blog-card-footer {
+  border-top-color: rgba(255, 255, 255, 0.05);
+}
+
+.read-more-text {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: $main-color;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.go-arrow {
+  transition: transform 0.3s ease;
+  font-size: 18px;
+  color: $main-color;
+}
+
+/* Hide original corner */
+.go-corner {
+  display: none;
+}
