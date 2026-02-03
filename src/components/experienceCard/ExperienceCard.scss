@@ -44,6 +44,73 @@
   }
 }
 
+// Industrial Section Theme
+.industrial-card {
+  border-left: 5px solid #2d3436;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background-image: radial-gradient(#2d3436 0.5px, transparent 0.5px);
+    background-size: 10px 10px;
+    opacity: 0.1;
+    pointer-events: none;
+  }
+
+  .experience-company {
+    color: #273c75 !important;
+  }
+
+  .experience-card-accent {
+    background: linear-gradient(135deg, #273c75 0%, #192a56 100%) !important;
+  }
+
+  &:hover {
+    border-color: #273c75;
+    box-shadow: 0 20px 40px rgba(39, 60, 117, 0.15) !important;
+  }
+}
+
+// Research Section Theme
+.research-card {
+  border-left: 5px solid #6c5ce7;
+
+  .experience-company {
+    color: #6c5ce7 !important;
+  }
+
+  .experience-card-accent {
+    background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%) !important;
+  }
+
+  &:hover {
+    border-color: #6c5ce7;
+    box-shadow: 0 20px 40px rgba(108, 92, 231, 0.15) !important;
+  }
+}
+
+// Teaching Section Theme
+.teaching-card {
+  border-left: 5px solid #00b894;
+
+  .experience-company {
+    color: #00b894 !important;
+  }
+
+  .experience-card-accent {
+    background: linear-gradient(135deg, #00b894 0%, #55efc4 100%) !important;
+  }
+
+  &:hover {
+    border-color: #00b894;
+    box-shadow: 0 20px 40px rgba(0, 184, 148, 0.15) !important;
+  }
+}
+
 .experience-card-header {
   display: flex;
   align-items: center;
@@ -151,12 +218,24 @@
         content: "✦";
         position: absolute;
         left: 0;
-        color: $main-color;
+        color: inherit; // Inherit from parent section color
         font-weight: bold;
         font-size: 16px;
       }
     }
   }
+}
+
+.industrial-card .experience-bullets ul li::before {
+  color: #273c75;
+}
+
+.research-card .experience-bullets ul li::before {
+  color: #6c5ce7;
+}
+
+.teaching-card .experience-bullets ul li::before {
+  color: #00b894;
 }
 
 .dark-mode .experience-bullets ul li {

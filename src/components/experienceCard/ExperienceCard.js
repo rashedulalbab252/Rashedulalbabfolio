@@ -2,8 +2,20 @@ import React, { createRef } from "react";
 import { Fade } from "react-reveal";
 import "./ExperienceCard.scss";
 
-export default function ExperienceCard({ cardInfo, isDark }) {
+export default function ExperienceCard({ cardInfo, isDark, sectionName }) {
   const imgRef = createRef();
+
+  const isIndustrial = sectionName?.toLowerCase().includes("industrial");
+  const isResearch = sectionName?.toLowerCase().includes("research");
+  const isTeaching = sectionName?.toLowerCase().includes("teaching");
+
+  const cardClass = [
+    "experience-card",
+    isDark ? "dark-mode" : "",
+    isIndustrial ? "industrial-card" : "",
+    isResearch ? "research-card" : "",
+    isTeaching ? "teaching-card" : ""
+  ].join(" ");
 
   const GetDescBullets = ({ descBullets }) => {
     return descBullets
@@ -17,7 +29,7 @@ export default function ExperienceCard({ cardInfo, isDark }) {
 
   return (
     <Fade bottom duration={1000} distance="20px">
-      <div className={isDark ? "dark-mode experience-card" : "experience-card"}>
+      <div className={cardClass}>
         <div className="experience-card-header">
           {cardInfo.companylogo && (
             <div className="experience-card-logo">
@@ -80,7 +92,7 @@ export default function ExperienceCard({ cardInfo, isDark }) {
             </ul>
           </div>
         </div>
-        
+
         {/* Decorative element */}
         <div className="experience-card-accent"></div>
       </div>

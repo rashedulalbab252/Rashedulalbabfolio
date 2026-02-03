@@ -28,6 +28,7 @@ export default function WorkExperience() {
                       <ExperienceCard
                         key={i}
                         isDark={isDark}
+                        sectionName={section.title}
                         cardInfo={{
                           company: card.company,
                           desc: card.desc,
