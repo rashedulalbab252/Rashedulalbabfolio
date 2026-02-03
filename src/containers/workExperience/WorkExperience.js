@@ -10,22 +10,18 @@ export default function WorkExperience() {
   if (workExperiences.display) {
     return (
       <div className="experience-main" id="experience">
-        <div className={isDark ? "dark-mode experience-container" : "experience-container"} id="workExperience">
+        <div className={isDark ? "dark-mode experience-container" : "experience-container"}>
           <div className="experience-section-wrapper">
             <h1 className={isDark ? "dark-mode experience-heading" : "experience-heading"}>
-              <span className="name-gradient">Experiences</span>
+              <span className="name-gradient">Work & Research</span>
             </h1>
             {workExperiences.sections.map((section, index) => (
               <div key={index} className="experience-section">
-                <h2
-                  className={
-                    isDark
-                      ? "dark-mode experience-section-title"
-                      : "experience-section-title"
-                  }
-                >
-                  {section.title}
-                </h2>
+                <Fade bottom duration={1000} distance="20px">
+                  <h2 className={isDark ? "dark-mode experience-section-title" : "experience-section-title"}>
+                    {section.title}
+                  </h2>
+                </Fade>
                 <div className="experience-cards-div">
                   {section.experiences.map((card, i) => {
                     return (

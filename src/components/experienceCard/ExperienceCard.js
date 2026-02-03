@@ -1,5 +1,5 @@
 import React, { createRef } from "react";
-import { Fade, Slide } from "react-reveal";
+import { Fade } from "react-reveal";
 import "./ExperienceCard.scss";
 
 export default function ExperienceCard({ cardInfo, isDark }) {
@@ -16,89 +16,74 @@ export default function ExperienceCard({ cardInfo, isDark }) {
   };
 
   return (
-    <div>
+    <Fade bottom duration={1000} distance="20px">
       <div className={isDark ? "dark-mode experience-card" : "experience-card"}>
-        {cardInfo.companylogo && (
-          <div className="experience-card-left">
+        <div className="experience-card-header">
+          {cardInfo.companylogo && (
+            <div className="experience-card-logo">
+              {cardInfo.companyWebsite ? (
+                <a
+                  href={cardInfo.companyWebsite}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    crossOrigin={"anonymous"}
+                    ref={imgRef}
+                    src={cardInfo.companylogo}
+                    alt={cardInfo.company}
+                  />
+                </a>
+              ) : (
+                <img
+                  crossOrigin={"anonymous"}
+                  ref={imgRef}
+                  src={cardInfo.companylogo}
+                  alt={cardInfo.company}
+                />
+              )}
+            </div>
+          )}
+          <div className="experience-card-title-group">
+            <h5 className={isDark ? "dark-mode experience-role" : "experience-role"}>
+              {cardInfo.role}
+            </h5>
             {cardInfo.companyWebsite ? (
               <a
                 href={cardInfo.companyWebsite}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="experience-company-link"
               >
-                <img
-                  crossOrigin={"anonymous"}
-                  ref={imgRef}
-                  className="experience-roundedimg"
-                  src={cardInfo.companylogo}
-                  alt={cardInfo.company}
-                />
+                <h6 className={isDark ? "dark-mode experience-company" : "experience-company"}>
+                  {cardInfo.company}
+                </h6>
               </a>
             ) : (
-              <img
-                crossOrigin={"anonymous"}
-                ref={imgRef}
-                className="experience-roundedimg"
-                src={cardInfo.companylogo}
-                alt={cardInfo.company}
-              />
-            )}
-          </div>
-        )}
-        <div className="experience-card-right">
-          {cardInfo.companyWebsite ? (
-            <a
-              href={cardInfo.companyWebsite}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="experience-company-link"
-            >
-              <h5
-                className={
-                  isDark
-                    ? "dark-mode experience-text-company"
-                    : "experience-text-company"
-                }
-              >
+              <h6 className={isDark ? "dark-mode experience-company" : "experience-company"}>
                 {cardInfo.company}
-              </h5>
-            </a>
-          ) : (
-            <h5
-              className={
-                isDark
-                  ? "dark-mode experience-text-company"
-                  : "experience-text-company"
-              }
-            >
-              {cardInfo.company}
-            </h5>
-          )}
-
-          <div className="experience-text-details">
-            <h5
-              className={
-                isDark
-                  ? "dark-mode experience-text-role"
-                  : "experience-text-role"
-              }
-            >
-              {cardInfo.role}
-            </h5>
-            <p
-              className={isDark ? "dark-mode experience-text-duration" : "experience-text-duration"}
-            >
+              </h6>
+            )}
+            <p className={isDark ? "dark-mode experience-duration" : "experience-duration"}>
               {cardInfo.date}
             </p>
-            <p className={isDark ? "dark-mode experience-text-desc" : "experience-text-desc"}>{cardInfo.desc}</p>
-            <div className="experience-text-bullets">
-              <ul>
-                <GetDescBullets descBullets={cardInfo.descBullets} />
-              </ul>
-            </div>
           </div>
         </div>
+
+        <div className="experience-card-body">
+          <p className={isDark ? "dark-mode experience-desc" : "experience-desc"}>
+            {cardInfo.desc}
+          </p>
+          <div className="experience-bullets">
+            <ul>
+              <GetDescBullets descBullets={cardInfo.descBullets} />
+            </ul>
+          </div>
+        </div>
+        
+        {/* Decorative element */}
+        <div className="experience-card-accent"></div>
       </div>
-    </div>
+    </Fade>
   );
 }
