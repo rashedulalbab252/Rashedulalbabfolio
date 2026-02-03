@@ -1,7 +1,12 @@
 @import "../../_globalColor";
 
 #skills {
-  background: #000000; // Consistent black background from image
+  background: $lightBackground2;
+  transition: all 0.3s ease;
+
+  &.dark-mode {
+    background: $darkBackground;
+  }
 }
 
 .skills-main-div {
@@ -19,7 +24,7 @@
   font-family: "Outfit", sans-serif;
   font-size: 64px;
   font-weight: 700;
-  color: $main-color !important; // Brilliant orange from image
+  color: $main-color !important;
   margin-bottom: 25px;
   letter-spacing: -1px;
 }
@@ -27,11 +32,16 @@
 .skills-text-subtitle {
   font-family: "Inter", sans-serif;
   font-size: 20px;
-  color: #ffffff;
+  color: $textColor;
   max-width: 900px;
   margin: 0 auto;
   line-height: 1.6;
   opacity: 0.9;
+  transition: color 0.3s ease;
+
+  &.dark-mode {
+    color: #ffffff;
+  }
 }
 
 .software-skills-row {
@@ -48,8 +58,9 @@
 }
 
 .skill-category-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   border-radius: 20px;
   padding: 35px;
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -57,11 +68,32 @@
   display: flex;
   flex-direction: column;
 
+  &.dark-mode {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: none;
+
+    .skill-category-icon,
+    .skill-category-title,
+    .skill-tag {
+      color: #ffffff;
+    }
+
+    .category-divider {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+
   &:hover {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba($main-color, 0.5);
     transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(255, 106, 0, 0.1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    border-color: rgba($main-color, 0.3);
+
+    &.dark-mode {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba($main-color, 0.5);
+      box-shadow: 0 15px 40px rgba(255, 106, 0, 0.1);
+    }
 
     .skill-category-icon {
       color: $main-color;
@@ -87,7 +119,7 @@
 
 .skill-category-icon {
   font-size: 28px;
-  color: #ffffff;
+  color: $titleColor;
   transition: color 0.3s ease;
 }
 
@@ -95,14 +127,14 @@
   font-family: "Outfit", sans-serif;
   font-size: 26px;
   font-weight: 700;
-  color: #ffffff;
+  color: $titleColor;
   margin: 0;
 }
 
 .category-divider {
   width: 100%;
   height: 1px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.05);
   transition: all 0.4s ease;
 }
 
@@ -114,13 +146,13 @@
 
 .skill-tag {
   background: transparent;
-  color: #ffffff;
+  color: $textColor;
   padding: 10px 22px;
   border-radius: 50px;
   font-family: "Inter", sans-serif;
   font-size: 14.5px;
   font-weight: 600;
-  border: 1.5px solid rgba(255, 106, 0, 0.4); // Specific orange border from image
+  border: 1.5px solid rgba(255, 106, 0, 0.4);
   transition: all 0.3s ease;
   cursor: default;
 

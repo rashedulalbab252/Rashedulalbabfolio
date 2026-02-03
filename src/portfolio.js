@@ -438,7 +438,7 @@ const bigProjects = {
       footerLink: [
         {
           name: "GitHub",
-          url: "https://github.com/rashedulalbab253/Tennis_analysis_system_using_YoloV12"
+          url: "https://github.com/rashedulalbab253/bangla-number-plate-detection-yolov11"
         }
       ]
     },

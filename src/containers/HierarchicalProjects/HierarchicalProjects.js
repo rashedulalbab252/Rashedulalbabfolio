@@ -21,7 +21,7 @@ export default function HierarchicalProjects() {
 
     return (
         <Fade bottom duration={1000} distance="20px">
-            <div className="main hierarchical-projects-main" id="hierarchical-projects">
+            <div className="main hierarchical-projects-main" id="projects">
                 <div>
                     <h1 className="skills-heading project-title-center">{bigProjects.title}</h1>
                     <p
