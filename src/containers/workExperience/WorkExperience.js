@@ -13,7 +13,7 @@ export default function WorkExperience() {
         <div className={isDark ? "dark-mode experience-container" : "experience-container"}>
           <div className="experience-section-wrapper">
             <h1 className={isDark ? "dark-mode experience-heading" : "experience-heading"}>
-              <span className="name-gradient">Work & Research</span>
+              <span className="name-gradient">Experiences</span>
             </h1>
             {workExperiences.sections.map((section, index) => (
               <div key={index} className="experience-section">
