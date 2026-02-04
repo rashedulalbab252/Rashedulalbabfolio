@@ -111,6 +111,24 @@
   }
 }
 
+// Professional Section Theme
+.professional-card {
+  border-left: 5px solid #f39c12;
+
+  .experience-company {
+    color: #f39c12 !important;
+  }
+
+  .experience-card-accent {
+    background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%) !important;
+  }
+
+  &:hover {
+    border-color: #f39c12;
+    box-shadow: 0 20px 40px rgba(243, 156, 18, 0.15) !important;
+  }
+}
+
 .experience-card-header {
   display: flex;
   align-items: center;
@@ -236,6 +254,10 @@
 
 .teaching-card .experience-bullets ul li::before {
   color: #00b894;
+}
+
+.professional-card .experience-bullets ul li::before {
+  color: #f39c12;
 }
 
 .dark-mode .experience-bullets ul li {

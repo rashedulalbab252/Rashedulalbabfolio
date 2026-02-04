@@ -128,28 +128,16 @@
   font-weight: 400;
   line-height: 1.6;
   text-align: left;
-  white-space: pre-wrap;
+  white-space: normal;
   color: #333333 !important; // Darker and cleaner
   margin-top: 10px;
   max-width: 800px;
 
   .highlight {
     color: #000000;
-    font-weight: 700; // Bolder for high-impact
-    position: relative;
-    display: inline-block;
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 2px;
-      left: 0;
-      width: 100%;
-      height: 8px;
-      background: rgba($main-color, 0.12);
-      z-index: -1;
-      border-radius: 2px;
-    }
+    font-weight: 700;
+    display: inline;
+    background: linear-gradient(180deg, transparent 70%, rgba($main-color, 0.12) 70%);
   }
 
   .highlight-alt {
@@ -163,10 +151,7 @@
 
   .highlight {
     color: #ffffff;
-
-    &::after {
-      background: rgba($main-color, 0.25);
-    }
+    background: linear-gradient(180deg, transparent 70%, rgba($main-color, 0.25) 70%);
   }
 }
 

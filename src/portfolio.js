@@ -23,7 +23,7 @@ const greeting = {
   username: "Rashedul Albab",
   title: "Hi all, I'm Rashed",
   subTitle: emoji(
-    "AI Researcher & PhD Candidate with an EEE foundation, specializing in the synergy between Physics-Informed AI and Modern Multimodal Systems. My research bridges Computer Vision, NLP, and Behavioral AI to revolutionize Healthcare, Renewable Energy, and AI-Driven Electromagnetic Systems—transforming high-impact theory into resilient, real-world engineering solutions."
+    "I am an AI Researcher and prospective PhD student with a strong foundation in Electrical and Electronic Engineering (EEE). My research centers on physics-informed and multimodal artificial intelligence, synergizing Computer Vision, Natural Language Processing, and Generative AI to model complex real-world systems. I am driven to develop theoretically grounded, generalizable architectures that respect physical and signal-level constraints. Targeting high-impact applications in Healthcare, Renewable Energy, and Electromagnetic systems using AI, my work aims to bridge the gap between rigorous academic theory and robust, scalable engineering deployment. "
   ),
   resumeLink:
     "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
@@ -60,7 +60,7 @@ const skillsSection = {
       "⚡ Software & DevOps: Simulink, Proteus, AutoCAD, FastAPI, Docker, Git, LangGraph"
     ),
     emoji(
-      "⚡ AI/ML: Core Machine Learning (Supervised and Unsupervised Learning), Deep Learning (Neural Networks, Transformer), Fundamentals of NLP, LLM, Multimodal LLM, Rag, Generative Models (GAN)"
+      "⚡ AI/ML: Core Machine Learning (Supervised and Unsupervised Learning), Deep Learning (Neural Networks, Transformers), Advanced NLP, LLMs, Multimodal AI, RAG, Generative Models (GANs)"
     ),
     emoji(
       "⚡ Computer Vision: Image Segmentation, Object Detection, Digital Image Processing (Feature Extraction, Enhancement), Optical Character Recognition (OCR), Vision Language Model (VLM)"
@@ -210,7 +210,7 @@ const workExperiences = {
       ]
     },
     {
-      title: "Professional Experiences",
+      title: "Professional Experience",
       experiences: [
         {
           title: "Machine Learning Engineer Intern",
@@ -312,7 +312,7 @@ const bigProjects = {
       ]
     },
     {
-      categoryName: "Speech AI & NLP",
+      categoryName: "Multimodal NLP & Speech",
       categoryIcon: "fas fa-microphone-alt",
       projects: [
         {
@@ -321,6 +321,11 @@ const bigProjects = {
           footerLink: [
             { name: "GitHub", url: "https://github.com/rashedulalbab253/english-bengali-voice-ai" }
           ]
+        },
+        {
+          projectName: "OmniServe AI – Context-Aware Real-Time Voice Customer Support Platform",
+          projectDesc: "Built a context-aware, real-time voice customer support platform capable of handling complex queries with low latency, enhancing user engagement and streamlining support operations.",
+          footerLink: [{ name: "GitHub", url: "https://github.com/rashedulalbab253/Customer_voice_agent" }]
         }
       ]
     },
@@ -329,9 +334,9 @@ const bigProjects = {
       categoryIcon: "fas fa-eye",
       projects: [
         {
-          projectName: "BengalVision ALPR: AI-Powered Bangla Number Plate System",
+          projectName: "BengalVision ALPR: AI-Powered Bangla Number Plate Recognition & Detection System",
           projectDesc: "Real-time detection and recognition of Bangladeshi vehicle number plates using YOLOv11 and custom OCR, optimized with OpenVINO for edge deployment.",
-          footerLink: [{ name: "GitHub", url: "https://github.com/rashedulalbab253/BengalPlateAI" }]
+          footerLink: [{ name: "GitHub", url: "https://github.com/rashedulalbab253/bangla-number-plate-detection-yolov11" }]
         },
         {
           projectName: "CourtVision: AI Powered Tennis Match Analysis",
@@ -350,7 +355,7 @@ const bigProjects = {
           footerLink: [{ name: "GitHub", url: "https://github.com/rashedulalbab253/Medibot_with-LLMs-LangChain-Pinecone-Flask-AWS" }]
         },
         {
-          projectName: "DermatoScan AI & LesionNet",
+          projectName: "DermatoScan AI: End-to-End Skin Cancer Classification System",
           projectDesc: "End-to-end skin lesion classification systems achieving 97%+ accuracy using custom CNN architectures (LesionNet) and EfficientNet-B3.",
           footerLink: [{ name: "GitHub", url: "https://github.com/rashedulalbab253/DermatoScan-End-to-End-AI" }]
         }
@@ -383,6 +388,11 @@ const bigProjects = {
   // Legacy flat structure for backward compatibility
   projects: [
     {
+      projectName: "OmniServe AI – Context-Aware Real-Time Voice Customer Support Platform",
+      projectDesc: "Built a context-aware, real-time voice customer support platform capable of handling complex queries with low latency, enhancing user engagement and streamlining support operations.",
+      footerLink: [{ name: "GitHub", url: "https://github.com/rashedulalbab253/Customer_voice_agent" }]
+    },
+    {
       projectName: "IoT Based Environmental Data logger(ESP32)",
       projectDesc: "Designed and implemented a realtime environmental monitoring system using ESP32 and multiple sensors, enabling cloud based data logging and remote access through Google Sheets.",
       footerLink: [
@@ -414,7 +424,7 @@ const bigProjects = {
     },
     {
       projectName: "Albab ExamAI – Real-time AI-powered Exam Management System",
-      projectDesc: " Developed an AI-powered Exam Management System using FastAPI, Groq Llama 3, and Docker for automated grading of MCQs and subjective answers.Implemented real-time feedback, anti-cheat security, and crash-resilient exam sessions.Deployed a scalable production-ready platform with background evaluation queues and CI/CD pipelines.",
+      projectDesc: "Developed an AI-powered Exam Management System using FastAPI, Groq Llama 3, and Docker for automated grading of MCQs and subjective answers. Implemented real-time feedback, anti-cheat security, and crash-resilient exam sessions. Deployed a scalable production-ready platform with background evaluation queues and CI/CD pipelines.",
       footerLink: [
         {
           name: "GitHub",
@@ -424,7 +434,7 @@ const bigProjects = {
     },
     {
       projectName: "MathRAG AI – Reliable Multimodal Math Problem Solver",
-      projectDesc: " Built a end-to-end AI Math Mentor that can solve  math problems using multimodal inputs (image, audio, text), explain solutions step-by-step, and improve over time using memory and human feedback.",
+      projectDesc: "Built an end-to-end AI Math Mentor that can solve math problems using multimodal inputs (image, audio, text), explain solutions step-by-step, and improve over time using memory and human feedback.",
       footerLink: [
         {
           name: "GitHub",
@@ -433,8 +443,8 @@ const bigProjects = {
       ]
     },
     {
-      projectName: "BengalVision ALPR: AI-Powered Bangla Number Plate Detection and Recognition System",
-      projectDesc: " Engineered an AI-powered ALPR system, BengalPlateAI, for real-time detection and recognition of Bangladeshi vehicle number plates using YOLOv11. Built FastAPI dashboards featuring confidence tuning and session tracking, with Docker-based deployment for production readiness. Optimized inference across PyTorch, ONNX, and OpenVINO, achieving approximately 92% accuracy in complex urban environments.",
+      projectName: "BengalVision ALPR: AI-Powered Bangla Number Plate Recognition & Detection System",
+      projectDesc: "Engineered an AI-powered ALPR system, BengalPlateAI, for real-time detection and recognition of Bangladeshi vehicle number plates using YOLOv11. Built FastAPI dashboards featuring confidence tuning and session tracking, with Docker-based deployment for production readiness. Optimized inference across PyTorch, ONNX, and OpenVINO, achieving approximately 92% accuracy in complex urban environments.",
       footerLink: [
         {
           name: "GitHub",
@@ -463,7 +473,7 @@ const bigProjects = {
       ]
     },
     {
-      projectName: "DermatoScan AI ",
+      projectName: "DermatoScan AI: End-to-End Skin Cancer Classification System",
       projectDesc: " DermatoScan AI is an end-to-end skin lesion classification system using EfficientNet-B3 (PyTorch) for multi-class diagnosis.Built with FastAPI, Docker, and CI/CD, it delivers secure, production-ready medical AI deployment",
       footerLink: [
         {
@@ -540,13 +550,13 @@ const achievementSection = {
 
 const researchSection = {
   title: "Research Contributions",
-  subtitle: "Specialized research interests",
+  subtitle: "Research Interests",
   interests: [
     "AI in Healthcare",
     "Computer Vision",
-    "Behavioral AI",
-    "Natural Language Processing (NLP)",
-    "AI-Driven Electromagnetic System",
+    "Physics-Informed AI",
+    "Natural Language Processing",
+    "Electromagnetics AI",
     "AI in Renewable Energy"
   ],
   sections: [

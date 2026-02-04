@@ -32,8 +32,7 @@ export default function Greeting() {
                     : "greeting-text-p subTitle"
                 }
               >
-                <span className="highlight">AI Researcher & PhD Candidate</span> with an EEE foundation, specializing in the synergy between <span className="highlight">Physics-Informed AI</span> and <span className="highlight">Modern Multimodal Systems</span>.
-                My research bridges <span className="highlight">Computer Vision</span>, <span className="highlight">NLP</span>, and <span className="highlight">Behavioral AI</span> to revolutionize <span className="highlight-alt">Healthcare</span>, <span className="highlight-alt">Renewable Energy</span>, and <span className="highlight-alt">AI-Driven Electromagnetic Systems</span>—transforming high-impact theory into <span className="highlight-alt">resilient, real-world engineering solutions</span>.
+                <span className="highlight">AI Researcher & prospective PhD student</span> with a strong foundation in Electrical and Electronic Engineering (EEE). My research centers on <span className="highlight">physics-informed and multimodal artificial intelligence</span>, synergizing <span className="highlight">Computer Vision</span>, <span className="highlight">Natural Language Processing</span>, and <span className="highlight">Generative AI</span> to model complex real-world systems. I am driven to develop theoretically grounded, generalizable architectures that respect physical and signal-level constraints. Targeting high-impact applications in <span className="highlight-alt">Healthcare</span>, <span className="highlight-alt">Renewable Energy</span>, and <span className="highlight-alt">Electromagnetic systems using AI</span>, my work aims to bridge the gap between rigorous academic theory and <span className="highlight-alt">robust, scalable engineering deployment</span>.
               </p>
 
               <div className="button-greeting-div">

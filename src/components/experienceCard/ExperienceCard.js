@@ -8,13 +8,15 @@ export default function ExperienceCard({ cardInfo, isDark, sectionName }) {
   const isIndustrial = sectionName?.toLowerCase().includes("industrial");
   const isResearch = sectionName?.toLowerCase().includes("research");
   const isTeaching = sectionName?.toLowerCase().includes("teaching");
+  const isProfessional = sectionName?.toLowerCase().includes("professional");
 
   const cardClass = [
     "experience-card",
     isDark ? "dark-mode" : "",
     isIndustrial ? "industrial-card" : "",
     isResearch ? "research-card" : "",
-    isTeaching ? "teaching-card" : ""
+    isTeaching ? "teaching-card" : "",
+    isProfessional ? "professional-card" : ""
   ].join(" ");
 
   const GetDescBullets = ({ descBullets }) => {
