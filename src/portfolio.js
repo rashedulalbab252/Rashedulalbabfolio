@@ -23,7 +23,7 @@ const greeting = {
   username: "Rashedul Albab",
   title: "Hi all, I'm Rashed",
   subTitle: emoji(
-    "I am an AI Researcher and prospective PhD student with a strong foundation in Electrical and Electronic Engineering (EEE). My research centers on physics-informed and multimodal artificial intelligence, synergizing Computer Vision, Natural Language Processing, and Generative AI to model complex real-world systems. I am driven to develop theoretically grounded, generalizable architectures that respect physical and signal-level constraints. Targeting high-impact applications in Healthcare, Renewable Energy, and Electromagnetic systems using AI, my work aims to bridge the gap between rigorous academic theory and robust, scalable engineering deployment. "
+    `I am an <span className="highlight">AI researcher and PhD applicant</span> specializing in theoretically grounded, <span className="highlight">multimodal architectures</span>. Leveraging a foundation in <span className="highlight">Electrical and Electronic Engineering</span>, my work combines <span className="highlight">Machine Learning, Computer Vision, NLP, and Deep Learning</span> to tackle complex challenges in <span className="highlight">Healthcare, Renewable Energy, and Smart Power Systems</span>. By integrating physics-informed modeling into <span className="highlight-alt">Generative AI and RF/Electromagnetic systems</span>, I develop <span className="highlight-alt">robust, scalable AI solutions</span> that bridge rigorous academic theory with <span className="highlight-alt">transformative engineering applications</span>.`
   ),
   resumeLink:
     "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
@@ -549,15 +549,14 @@ const achievementSection = {
 // Research Section
 
 const researchSection = {
-  title: "Research Contributions",
+  title: "Research",
   subtitle: "Research Interests",
   interests: [
     "AI in Healthcare",
-    "Computer Vision",
-    "Physics-Informed AI",
-    "Natural Language Processing",
-    "Electromagnetics AI",
-    "AI in Renewable Energy"
+    "AI for Renewable Energy and Smart Power Systems",
+    "Computer Vision and Deep Learning",
+    "Natural Language Processing and Large Language Models",
+    "AI in Electromagnetic and RF Systems"
   ],
   sections: [
     {

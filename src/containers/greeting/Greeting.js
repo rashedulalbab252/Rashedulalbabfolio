@@ -32,7 +32,7 @@ export default function Greeting() {
                     : "greeting-text-p subTitle"
                 }
               >
-                <span className="highlight">AI Researcher & prospective PhD student</span> with a strong foundation in Electrical and Electronic Engineering (EEE). My research centers on <span className="highlight">physics-informed and multimodal artificial intelligence</span>, synergizing <span className="highlight">Computer Vision</span>, <span className="highlight">Natural Language Processing</span>, and <span className="highlight">Generative AI</span> to model complex real-world systems. I am driven to develop theoretically grounded, generalizable architectures that respect physical and signal-level constraints. Targeting high-impact applications in <span className="highlight-alt">Healthcare</span>, <span className="highlight-alt">Renewable Energy</span>, and <span className="highlight-alt">Electromagnetic systems using AI</span>, my work aims to bridge the gap between rigorous academic theory and <span className="highlight-alt">robust, scalable engineering deployment</span>.
+                I am an <span className="highlight">AI researcher and PhD applicant</span> specializing in theoretically grounded, <span className="highlight">multimodal architectures</span>. Leveraging a foundation in <span className="highlight">Electrical and Electronic Engineering</span>, my work combines <span className="highlight">Machine Learning, Computer Vision, NLP, and Deep Learning</span> to tackle complex challenges in <span className="highlight">Healthcare, Renewable Energy, and Smart Power Systems</span>. By integrating physics-informed modeling into <span className="highlight-alt">Generative AI and RF/Electromagnetic systems</span>, I develop <span className="highlight-alt">robust, scalable AI solutions</span> that bridge rigorous academic theory with <span className="highlight-alt">transformative engineering applications</span>.
               </p>
 
               <div className="button-greeting-div">
@@ -45,7 +45,7 @@ export default function Greeting() {
                     rel="noopener noreferrer"
                     className="main-button"
                   >
-                    Download my resume
+                    Download my CV
                   </a>
                 )}
               </div>
