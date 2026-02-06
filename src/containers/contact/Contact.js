@@ -49,15 +49,19 @@ export default function Contact() {
               </div>
 
               <div className={isDark ? "contact-form-container dark" : "contact-form-container"}>
-                <form className="contact-form">
+                <form
+                  className="contact-form"
+                  action={contactInfo.contactFormAction}
+                  method="POST"
+                >
                   <div className="form-group">
-                    <input type="text" placeholder="Your Name" required />
+                    <input type="text" name="name" placeholder="Your Name" required />
                   </div>
                   <div className="form-group">
-                    <input type="email" placeholder="Your Email" required />
+                    <input type="email" name="email" placeholder="Your Email" required />
                   </div>
                   <div className="form-group">
-                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                   </div>
                   <button type="submit" className="contact-button">
                     Send Message <i className="fas fa-paper-plane"></i>

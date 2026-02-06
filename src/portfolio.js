@@ -323,6 +323,11 @@ const bigProjects = {
           ]
         },
         {
+          projectName: "AgroGPT: Intelligent Multilingual Agri-Advisory System",
+          projectDesc: "A specialized multilingual voice-enabled AI advisor for agriculture, helping farmers overcome language barriers to access expert agricultural knowledge and pest management advice.",
+          footerLink: [{ name: "GitHub", url: "https://github.com/rashedulalbab253/AgroGPT-Multilingual-Voice-Chat" }]
+        },
+        {
           projectName: "OmniServe AI – Context-Aware Real-Time Voice Customer Support Platform",
           projectDesc: "Built a context-aware, real-time voice customer support platform capable of handling complex queries with low latency, enhancing user engagement and streamlining support operations.",
           footerLink: [{ name: "GitHub", url: "https://github.com/rashedulalbab253/Customer_voice_agent" }]
@@ -349,6 +354,11 @@ const bigProjects = {
       categoryName: "Healthcare AI",
       categoryIcon: "fas fa-heartbeat",
       projects: [
+        {
+          projectName: "SV-MedVision Pro: Agentic Multi-modal Grounding for Autonomous Radiology",
+          projectDesc: "An advanced agentic multi-modal AI system for autonomous radiology, leveraging specialized grounding techniques and reasoning to enhance diagnostic accuracy and clinical decision support.",
+          footerLink: [{ name: "GitHub", url: "https://github.com/rashedulalbab253/SV-MedVision-Pro" }]
+        },
         {
           projectName: "Medibot AI: Retrieval-Grounded Clinical Assistant",
           projectDesc: "RAG-powered clinical chatbot orchestrating LLMs and vector retrieval for domain-grounded medical answers on AWS.",
@@ -387,6 +397,26 @@ const bigProjects = {
 
   // Legacy flat structure for backward compatibility
   projects: [
+    {
+      projectName: "SV-MedVision Pro: Agentic Multi-modal Grounding for Autonomous Radiology",
+      projectDesc: "Developed an agentic multi-modal AI system for autonomous radiology, featuring advanced grounding mechanisms and clinical reasoning. Integrated specialized medical LLMs with vision encoders to provide explainable diagnostic insights and cross-modality data synthesis for radiology workflows.",
+      footerLink: [
+        {
+          name: "GitHub",
+          url: "https://github.com/rashedulalbab253/SV-MedVision-Pro"
+        }
+      ]
+    },
+    {
+      projectName: "AgroGPT: Intelligent Multilingual Agri-Advisory System",
+      projectDesc: "Built an intelligent multilingual agri-advisory system that uses voice interaction to bridge the gap between farmers and expert agricultural guidance. Supporting various local languages, it provides real-time advice on crop management, weather impacts, and pest control.",
+      footerLink: [
+        {
+          name: "GitHub",
+          url: "https://github.com/rashedulalbab253/AgroGPT-Multilingual-Voice-Chat"
+        }
+      ]
+    },
     {
       projectName: "OmniServe AI – Context-Aware Real-Time Voice Customer Support Platform",
       projectDesc: "Built a context-aware, real-time voice customer support platform capable of handling complex queries with low latency, enhancing user engagement and streamlining support operations.",
@@ -903,7 +933,8 @@ const contactInfo = {
   subtitle:
     "Have a question or want to collaborate on a research or project? Feel free to reach out!",
   number: "+8801834616407",
-  email_address: "albabahmed74@gmail.com"
+  email_address: "albabahmed74@gmail.com",
+  contactFormAction: "https://formspree.io/f/mjgevvbq"
 };
 
 // Twitter Section

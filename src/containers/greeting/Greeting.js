@@ -39,7 +39,7 @@ export default function Greeting() {
                 <Button text="Contact me" href="#contact" />
                 {greeting.resumeLink && (
                   <a
-                    href="/cv_of_Rashedul_Albab.pdf"
+                    href={`${process.env.PUBLIC_URL}/cv_of_Rashedul_Albab.pdf`}
                     download="cv_of_Rashedul_Albab.pdf"
                     target="_blank"
                     rel="noopener noreferrer"

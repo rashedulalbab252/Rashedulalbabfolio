@@ -9,8 +9,12 @@ export default function StartupProject() {
     if (!url) {
       return;
     }
-    var win = window.open(url, "_blank");
-    win.focus();
+    // If the URL is relative (starts with /), prefix it with PUBLIC_URL
+    const finalUrl = url.startsWith("/") ? `${process.env.PUBLIC_URL}${url}` : url;
+    var win = window.open(finalUrl, "_blank");
+    if (win) {
+      win.focus();
+    }
   }
 
   const { isDark } = useContext(StyleContext);
