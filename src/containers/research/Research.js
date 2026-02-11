@@ -29,15 +29,24 @@ export default function Research() {
                         <h1 className={isDark ? "dark-mode research-heading" : "research-heading"}>
                             {researchSection.title}
                         </h1>
-                        <p className={isDark ? "dark-mode research-subtitle" : "research-subtitle"}>
-                            {researchSection.subtitle}
-                        </p>
-                        <div className="interests-div">
-                            {researchSection.interests.map((interest, i) => (
-                                <span key={i} className={isDark ? "dark-mode interest-span" : "interest-span"}>
-                                    {interest}
-                                </span>
-                            ))}
+                        <div className="research-interests-container">
+                            <h2 className={isDark ? "dark-mode research-subtitle" : "research-subtitle"}>
+                                {researchSection.subtitle}
+                            </h2>
+                            <div className="interests-div">
+                                {researchSection.interests.map((interest, i) => (
+                                    <div key={i} className={isDark ? "dark-mode interest-span" : "interest-span"}>
+                                        <i className={
+                                            interest.toLowerCase().includes("healthcare") ? "fas fa-heartbeat" :
+                                                interest.toLowerCase().includes("renewable") ? "fas fa-solar-panel" :
+                                                    interest.toLowerCase().includes("vision") ? "fas fa-eye" :
+                                                        interest.toLowerCase().includes("natural language") ? "fas fa-brain" :
+                                                            interest.toLowerCase().includes("rf systems") ? "fas fa-broadcast-tower" : "fas fa-microscope"
+                                        }></i>
+                                        {interest}
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </Fade>
@@ -64,7 +73,13 @@ export default function Research() {
                                                         </h3>
                                                         <div className="pub-venue-row">
                                                             {project.publishedAt && (
-                                                                <span className="venue-badge">{project.publishedAt}</span>
+                                                                <span
+                                                                    className="venue-badge"
+                                                                    onClick={() => project.venueLink && openUrlInNewTab(project.venueLink)}
+                                                                    style={{ cursor: project.venueLink ? "pointer" : "default" }}
+                                                                >
+                                                                    {project.publishedAt}
+                                                                </span>
                                                             )}
                                                         </div>
                                                     </div>

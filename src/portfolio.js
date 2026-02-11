@@ -23,7 +23,7 @@ const greeting = {
   username: "Rashedul Albab",
   title: "Hi all, I'm Rashed",
   subTitle: emoji(
-    `I am an <span className="highlight">AI researcher and PhD applicant</span> specializing in theoretically grounded, <span className="highlight">multimodal architectures</span>. Leveraging a foundation in <span className="highlight">Electrical and Electronic Engineering</span>, my work combines <span className="highlight">Machine Learning, Computer Vision, NLP, and Deep Learning</span> to tackle complex challenges in <span className="highlight">Healthcare, Renewable Energy, and Smart Power Systems</span>. By integrating physics-informed modeling into <span className="highlight-alt">Generative AI and RF/Electromagnetic systems</span>, I develop <span className="highlight-alt">robust, scalable AI solutions</span> that bridge rigorous academic theory with <span className="highlight-alt">transformative engineering applications</span>.`
+    `I am an <span className="highlight">AI researcher and PhD applicant</span> specializing in theoretically grounded, <span className="highlight">multimodal architectures</span>. Leveraging a foundation in <span className="highlight">Electrical and Electronic Engineering</span>, my work combines <span className="highlight">Machine Learning, Computer Vision, NLP, and Deep Learning</span> to tackle complex challenges in <span className="highlight">Healthcare, Renewable Energy, and Smart Power Systems</span>. By integrating physics-informed modeling into <span className="highlight-alt">Generative AI and RF/Electromagnetic systems</span>, I aim to develop <span className="highlight-alt">robust, scalable AI solutions</span> that bridge rigorous academic theory with <span className="highlight-alt">transformative engineering applications</span>.`
   ),
   resumeLink:
     "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
@@ -136,7 +136,7 @@ const educationInfo = {
       logo: "/works/sust_logo.png",
       schoolUrl: "https://www.sust.edu/",
       subHeader: "Bachelor of Science in Electrical and Electronic Engineering",
-      duration: "January 2020 - July 2025",
+      duration: "January 2020 - June 2025",
       //desc: "Participated in the research of XXX and published 3 papers.",
       //descBullets: [
       // "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
@@ -295,12 +295,12 @@ const bigProjects = {
       categoryIcon: "fas fa-brain",
       projects: [
         {
-          projectName: "MathRAG AI – Reliable Multimodal Math Problem Solver",
-          projectDesc: "Built an end-to-end AI Math Mentor that solves math problems using multimodal inputs (image, audio, text), explains solutions step-by-step, and improves via human feedback.",
-          footerLink: [{ name: "GitHub", url: "https://github.com/rashedulalbab253/AI_math_solver_system_" }]
+          projectName: "AI-Driven 100+ Language STEM Solver",
+          projectDesc: "Developed an AI-powered multilingual STEM solver using FastAPI, Docker, and Google Gemini 2.5, providing step-by-step solutions for Math, Physics, and Chemistry in 100+ languages",
+          footerLink: [{ name: "GitHub", url: "https://github.com/rashedulalbab253/Bengali-with-100_languages-math-physics-chemistry-problem-solver-system" }]
         },
         {
-          projectName: "Albab ExamAI – AI-powered Exam Management System",
+          projectName: "AI-Powered Smart Exam Platform",
           projectDesc: "A scalable platform using FastAPI and Groq Llama 3 for automated grading, real-time anti-cheat security, and crash-resilient exam sessions.",
           footerLink: [{ name: "GitHub", url: "https://github.com/rashedulalbab253/GenAI-Assessment-Engine" }]
         },
@@ -619,10 +619,11 @@ Keywords—Power quality disturbances, Power quality monitoring, Machine learnin
 
 `,
           publishedAt: "Accepted at: 28th ICCIT 2025(IEEE)",
+          venueLink: "https://iccit.org.bd/2025/",
           footerLink: [
             {
               name: "View Paper",
-              url: "https://iccit.org.bd/2025/"
+              url: "https://www.researchgate.net/publication/399680213_Explainable_Machine_Learning_for_Multi-Class_Power_Quality_Disturbance_Classification_Using_SHAP_and_Feature_Importance_Analysis"
             }
           ]
         },
@@ -635,10 +636,11 @@ Index Terms—Socioeconomic Status (SES), Parent-Child Relationships, Machine Le
 
 `,
           publishedAt: "Accepted at: 28th ICCIT 2025(IEEE)",
+          venueLink: "https://iccit.org.bd/2025/",
           footerLink: [
             {
               name: "View Paper",
-              url: "https://iccit.org.bd/2025/"
+              url: "https://www.researchgate.net/publication/399871831_Quantifying_the_Relationship_between_Socioeconomic_Status_and_Parent-Child_Attachment_on_Adolescents_through_Machine_Learning"
             }
           ]
         },
@@ -652,10 +654,11 @@ Keywords—Wind Turbine, Wind Energy, Machine Learning (ML), Power Output Classi
 
 `,
           publishedAt: "Accepted at: 28th ICCIT 2025(IEEE)",
+          venueLink: "https://iccit.org.bd/2025/",
           footerLink: [
             {
               name: "View Paper",
-              url: "https://iccit.org.bd/2025/"
+              url: "https://www.researchgate.net/publication/399763932_Enhancing_Wind_Farm_Operational_Efficiency_Through_Power_Output_Classification_Using_MLP_and_Ensemble_Models"
             }
           ]
         },
@@ -667,10 +670,11 @@ Index Terms—Metasurface, Voltage Controlled Switch, Temporal modulation, Surfa
 
 `,
           publishedAt: "Accepted at: 28th ICCIT 2025(IEEE)",
+          venueLink: "https://iccit.org.bd/2025/",
           footerLink: [
             {
               name: "View Paper",
-              url: "https://iccit.org.bd/2025/"
+              url: "https://www.researchgate.net/publication/400596439_Time-Dependent_Control_of_Voltage_and_Current_via_a_Tunable_Metasurface"
             }
           ]
         },

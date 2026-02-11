@@ -31,9 +31,8 @@ export default function Greeting() {
                     ? "dark-mode greeting-text-p"
                     : "greeting-text-p subTitle"
                 }
-              >
-                I am an <span className="highlight">AI researcher and PhD applicant</span> specializing in theoretically grounded, <span className="highlight">multimodal architectures</span>. Leveraging a foundation in <span className="highlight">Electrical and Electronic Engineering</span>, my work combines <span className="highlight">Machine Learning, Computer Vision, NLP, and Deep Learning</span> to tackle complex challenges in <span className="highlight">Healthcare, Renewable Energy, and Smart Power Systems</span>. By integrating physics-informed modeling into <span className="highlight-alt">Generative AI and RF/Electromagnetic systems</span>, I develop <span className="highlight-alt">robust, scalable AI solutions</span> that bridge rigorous academic theory with <span className="highlight-alt">transformative engineering applications</span>.
-              </p>
+                dangerouslySetInnerHTML={{ __html: greeting.subTitle }}
+              />
 
               <div className="button-greeting-div">
                 <Button text="Contact me" href="#contact" />
