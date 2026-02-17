@@ -20,7 +20,7 @@
     background: $main-color;
     width: 0%;
     transition: width 0.1s ease-out;
-    box-shadow: 0 0 10px rgba($main-color, 0.5);
+    box-shadow: 0 0 10px rgba($main-color, 0.4);
 }
 
 .blog-detail-container {
@@ -29,7 +29,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    background-color: #f8f9fa;
+    background-color: #f8fafc;
     transition: background-color 0.3s ease;
 }
 
@@ -43,7 +43,7 @@
     background: white;
     border-radius: 20px;
     padding: 50px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
     position: relative;
     border-top: 10px solid $main-color;
     transition: all 0.3s ease;
@@ -70,7 +70,7 @@
 .dark-mode .blog-detail-card {
     background: $cardBackgroundDark;
     border: 1px solid $cardBorderDark;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(15px);
     border-top: 10px solid $main-color;
 
@@ -85,7 +85,7 @@
     overflow: hidden;
     border-radius: 15px;
     margin-bottom: 40px;
-    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
 }
 
 .blog-detail-image {
@@ -117,7 +117,7 @@
 }
 
 .detail-read-time {
-    color: #718096;
+    color: #94a3b8;
     font-size: 0.9rem;
     display: flex;
     align-items: center;
@@ -131,14 +131,14 @@
 .detail-title {
     font-size: 3rem;
     font-weight: 850;
-    color: #1a202c;
+    color: #0f172a;
     margin-bottom: 30px;
     line-height: 1.1;
     letter-spacing: -0.02em;
 }
 
 .dark-mode .detail-title {
-    color: #fff;
+    color: #f1f5f9;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -169,7 +169,7 @@
 }
 
 .dark-mode .description-heading {
-    color: #fff;
+    color: #f1f5f9;
 
     &::after {
         background-color: $main-color;
@@ -179,14 +179,14 @@
 .detail-description {
     font-size: 1.2rem;
     line-height: 1.9;
-    color: #4a5568;
+    color: #475569;
     margin-bottom: 25px;
     font-family: 'Inter', sans-serif;
     letter-spacing: 0.01em;
 }
 
 .dark-mode .detail-description {
-    color: #cbd5e0;
+    color: #94a3b8;
 }
 
 .description-list-group {
@@ -203,7 +203,7 @@
         padding-left: 30px;
         margin-bottom: 12px;
         font-size: 1.15rem;
-        color: #4a5568;
+        color: #475569;
         line-height: 1.7;
 
         &::before {
@@ -219,7 +219,7 @@
 }
 
 .dark-mode .detail-list li {
-    color: #cbd5e0;
+    color: #94a3b8;
 }
 
 .detail-footer-links {
@@ -232,12 +232,12 @@
 }
 
 .dark-mode .detail-footer-links {
-    border-color: #2d3748;
+    border-color: rgba(241, 245, 249, 0.08);
 }
 
 .detail-tag {
     background-color: $main-color !important;
-    color: #fff !important;
+    color: #0a0f1a !important;
     border: none !important;
     padding: 15px 40px;
     border-radius: 12px;
@@ -249,11 +249,11 @@
     letter-spacing: 2px;
     display: flex;
     align-items: center;
-    box-shadow: 0 4px 15px rgba($main-color, 0.3);
+    box-shadow: 0 4px 15px rgba($main-color, 0.25);
 
     &:hover {
         transform: translateY(-3px);
-        box-shadow: 0 8px 25px rgba($main-color, 0.5);
+        box-shadow: 0 8px 25px rgba($main-color, 0.4);
         filter: brightness(1.1);
     }
 

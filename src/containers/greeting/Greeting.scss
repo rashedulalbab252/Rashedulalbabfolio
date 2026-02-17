@@ -11,7 +11,6 @@
   width: 90%;
   padding: 10px 10px;
   margin: 0px auto;
-  /* Make sure it takes full height minus header */
   min-height: 90vh;
   display: flex;
   align-items: center;
@@ -45,9 +44,7 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
-  /* Reduced from 10px */
   align-items: flex-start;
-  /* Align contents to start */
 }
 
 /* Ensure centering on mobile */
@@ -60,7 +57,6 @@
 .button-greeting-div {
   display: flex;
   margin-top: 10px;
-  /* Reduced from 40px */
   gap: 20px;
 }
 
@@ -73,13 +69,13 @@
   font-size: 80px;
   font-weight: 700;
   line-height: 1.1;
-  color: #1a1a1a !important;
+  color: #0f172a !important;
   text-align: left;
   margin-bottom: 25px;
   letter-spacing: -2px;
 
   .name-gradient {
-    background: linear-gradient(135deg, $main-color 0%, #ff8c00 100%);
+    background: linear-gradient(135deg, $main-color 0%, #00b4d8 50%, $accent-secondary 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -90,14 +86,13 @@
 }
 
 .dark-mode.greeting-text {
-  color: white !important;
+  color: #f1f5f9 !important;
 
   .name-gradient {
-    background: linear-gradient(135deg, $main-color 0%, #ff9d00 50%, #ffffff 100%);
+    background: linear-gradient(135deg, $main-color 0%, #00b4d8 40%, $accent-tertiary 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* Remove filter from here as it can break background-clip: text in some browsers */
   }
 }
 
@@ -112,14 +107,14 @@
     left: -100px;
     width: 300px;
     height: 300px;
-    background: radial-gradient(circle, rgba($main-color, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba($main-color, 0.08) 0%, transparent 70%);
     z-index: -1;
     pointer-events: none;
   }
 }
 
 .dark-mode.greeting-text {
-  color: white !important;
+  color: #f1f5f9 !important;
 }
 
 .greeting-text-p {
@@ -129,29 +124,33 @@
   line-height: 1.6;
   text-align: justify;
   white-space: normal;
-  color: #333333 !important; // Darker and cleaner
+  color: #334155 !important;
   margin-top: 10px;
   max-width: 800px;
 
   .highlight {
-    color: #000000;
+    color: #0f172a;
     font-weight: 700;
     display: inline;
-    background: linear-gradient(180deg, transparent 70%, rgba($main-color, 0.12) 70%);
+    background: linear-gradient(180deg, transparent 70%, rgba($main-color, 0.15) 70%);
   }
 
   .highlight-alt {
-    color: $main-color;
+    color: $accent-secondary;
     font-weight: 700;
   }
 }
 
 .dark-mode.greeting-text-p {
-  color: rgba(255, 255, 255, 0.7) !important;
+  color: rgba(241, 245, 249, 0.7) !important;
 
   .highlight {
-    color: #ffffff;
+    color: #f1f5f9;
     background: linear-gradient(180deg, transparent 70%, rgba($main-color, 0.25) 70%);
+  }
+
+  .highlight-alt {
+    color: $accent-tertiary;
   }
 }
 
@@ -177,7 +176,6 @@
   z-index: 2;
   filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4));
   animation: float 6s ease-in-out infinite;
-  /* Blend the bottom of the image */
   -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
   mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
   margin-top: -80px;
@@ -192,12 +190,10 @@
   width: 420px;
   height: 420px;
   border-radius: 50%;
-  border: 2px solid rgba(255, 106, 0, 0.3);
-  /* Subtle orange border */
-  background: radial-gradient(circle, rgba(255, 106, 0, 0.05) 0%, transparent 70%);
-  /* Subtle inner glow */
+  border: 2px solid rgba($main-color, 0.25);
+  background: radial-gradient(circle, rgba($main-color, 0.04) 0%, transparent 70%);
   z-index: 1;
-  box-shadow: 0 0 20px rgba(255, 106, 0, 0.1);
+  box-shadow: 0 0 30px rgba($main-color, 0.08);
 }
 
 .photo-bg-blob::after {
@@ -340,13 +336,13 @@
     transform: translateX(-50%);
     width: 80px;
     height: 3px;
-    background: linear-gradient(90deg, $main-color 0%, #ff8c42 100%);
+    background: linear-gradient(90deg, $main-color 0%, $accent-secondary 100%);
     border-radius: 2px;
   }
 }
 
 .dark-mode.hero-skills-title {
-  color: white;
+  color: #f1f5f9;
 }
 
 .hero-skills-container {
@@ -364,15 +360,15 @@
   padding: 15px 10px;
   background: white;
   border-radius: 12px;
-  border: 2px solid rgba(255, 106, 0, 0.1);
+  border: 2px solid rgba($main-color, 0.1);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: default;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 
   &:hover {
     transform: translateY(-5px);
     border-color: $main-color;
-    box-shadow: 0 8px 20px rgba(255, 106, 0, 0.2);
+    box-shadow: 0 8px 20px rgba($main-color, 0.15);
 
     .hero-skill-icon {
       transform: scale(1.2);
@@ -382,36 +378,36 @@
 }
 
 .dark-mode.hero-skill-item {
-  background: rgba(30, 30, 30, 0.6);
+  background: rgba(15, 23, 42, 0.6);
   backdrop-filter: blur(10px);
-  border-color: rgba(255, 106, 0, 0.2);
+  border-color: rgba($main-color, 0.15);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 
   &:hover {
     border-color: $main-color;
-    box-shadow: 0 8px 20px rgba(255, 106, 0, 0.3);
+    box-shadow: 0 8px 20px rgba($main-color, 0.2);
   }
 }
 
 .hero-skill-icon {
   font-size: 28px;
-  color: #555;
+  color: #475569;
   transition: all 0.3s ease;
 }
 
 .dark-mode .hero-skill-icon {
-  color: #ffa366;
+  color: rgba($main-color, 0.7);
 }
 
 .hero-skill-name {
   font-size: 13px;
   font-weight: 500;
-  color: #333;
+  color: #334155;
   text-align: center;
 }
 
 .dark-mode .hero-skill-name {
-  color: #e0e0e0;
+  color: #cbd5e1;
 }
 
 /* Media Query */
@@ -454,7 +450,6 @@
 
   .greeting-image-div {
     height: 300px;
-    /* Slightly taller to fit the blob */
   }
 
   /* Adjust blob for mobile */

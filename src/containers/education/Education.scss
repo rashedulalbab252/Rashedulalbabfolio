@@ -7,12 +7,11 @@
   text-align: center;
   margin-bottom: 60px;
   padding: 10px 0;
-  color: #1a1a1a !important;
+  color: #0f172a !important;
   line-height: 1.4;
   letter-spacing: -1px;
 
-  // Create a gradient for the primary text
-  background: linear-gradient(135deg, $main-color 0%, #ff8c00 100%);
+  background: linear-gradient(135deg, $main-color 0%, #00b4d8 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -31,7 +30,6 @@
 
 .education-section>* {
   flex: 1;
-  // margin-bottom: 30px;
 }
 
 .education-card-container {

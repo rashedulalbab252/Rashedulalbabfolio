@@ -14,7 +14,7 @@
   margin-bottom: 10px;
   padding: 10px 0;
   display: inline-block;
-  background: linear-gradient(135deg, $main-color 0%, darken($main-color, 20%) 100%);
+  background: linear-gradient(135deg, $main-color 0%, #00b4d8 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -23,14 +23,14 @@
 .contact-subtitle {
   font-family: "Inter", sans-serif;
   font-size: 18px;
-  color: #666;
+  color: #64748b;
   max-width: 700px;
   margin-bottom: 40px;
   line-height: 1.6;
 }
 
 .dark-mode.contact-subtitle {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(241, 245, 249, 0.5);
 }
 
 .contact-content-wrapper {
@@ -53,32 +53,32 @@
   padding: 25px;
   background: #ffffff;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.04);
   transition: all 0.3s ease;
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-    border-color: rgba($main-color, 0.3);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    border-color: rgba($main-color, 0.25);
   }
 
   &.dark {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.1);
+    background: rgba(15, 23, 42, 0.5);
+    border-color: rgba(241, 245, 249, 0.06);
     backdrop-filter: blur(10px);
 
     &:hover {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba($main-color, 0.5);
+      background: rgba(30, 41, 59, 0.6);
+      border-color: rgba($main-color, 0.4);
     }
 
     .contact-details h4 {
-      color: #fff;
+      color: #94a3b8;
     }
 
     .contact-details a {
-      color: rgba(255, 255, 255, 0.6);
+      color: #cbd5e1;
     }
   }
 }
@@ -86,7 +86,7 @@
 .contact-icon {
   width: 60px;
   height: 60px;
-  background: rgba($main-color, 0.1);
+  background: rgba($main-color, 0.08);
   border-radius: 15px;
   display: flex;
   align-items: center;
@@ -101,7 +101,7 @@
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #666;
+    color: #64748b;
     margin: 0 0 5px 0;
   }
 
@@ -109,7 +109,7 @@
     font-family: "Inter", sans-serif;
     font-size: 18px;
     font-weight: 600;
-    color: #333;
+    color: #1e293b;
     text-decoration: none;
     transition: color 0.3s ease;
 
@@ -125,7 +125,7 @@
   p {
     font-family: "Inter", sans-serif;
     font-size: 14px;
-    color: #888;
+    color: #94a3b8;
     margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -137,12 +137,12 @@
   background: #ffffff;
   padding: 40px;
   border-radius: 30px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.04);
 
   &.dark {
-    background: rgba(255, 255, 255, 0.03);
-    border-color: rgba(255, 255, 255, 0.05);
+    background: rgba(15, 23, 42, 0.4);
+    border-color: rgba(241, 245, 249, 0.04);
     backdrop-filter: blur(20px);
   }
 }
@@ -161,18 +161,18 @@
     width: 100%;
     padding: 18px 25px;
     background: rgba(0, 0, 0, 0.02);
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.06);
     border-radius: 15px;
     font-family: "Inter", sans-serif;
     font-size: 16px;
-    color: #333;
+    color: #1e293b;
     outline: none;
     transition: all 0.3s ease;
 
     &:focus {
       background: #fff;
       border-color: $main-color;
-      box-shadow: 0 10px 30px rgba($main-color, 0.1);
+      box-shadow: 0 10px 30px rgba($main-color, 0.08);
     }
   }
 }
@@ -181,19 +181,19 @@
 
   input,
   textarea {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
+    background: rgba(241, 245, 249, 0.04);
+    border-color: rgba(241, 245, 249, 0.08);
+    color: #f1f5f9;
 
     &:focus {
-      background: rgba(255, 255, 255, 0.08);
+      background: rgba(241, 245, 249, 0.06);
     }
   }
 }
 
 .contact-button {
   background: $main-color;
-  color: #fff;
+  color: #0a0f1a;
   padding: 18px 30px;
   border: none;
   border-radius: 15px;
@@ -206,11 +206,11 @@
   justify-content: center;
   gap: 12px;
   transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-  box-shadow: 0 10px 30px rgba($main-color, 0.3);
+  box-shadow: 0 10px 30px rgba($main-color, 0.25);
 
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba($main-color, 0.5);
+    box-shadow: 0 15px 40px rgba($main-color, 0.4);
     background: darken($main-color, 5%);
   }
 

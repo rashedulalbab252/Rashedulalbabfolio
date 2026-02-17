@@ -23,7 +23,7 @@
 }
 
 .project-card {
-  box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.15), 0 5px 10px -5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.12), 0 5px 10px -5px rgba(0, 0, 0, 0.04);
   border-radius: 10px;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
@@ -37,7 +37,7 @@
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.25), 0 10px 20px -10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.2), 0 10px 20px -10px rgba(0, 0, 0, 0.08);
 
     .card-title::after {
       width: 100%;
@@ -47,7 +47,7 @@
 
 .project-card-light {
   background-color: white;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   border-left: 5px solid $main-color;
 }
 
@@ -55,12 +55,12 @@
   background: $cardBackgroundDark !important;
   border: 1px solid $cardBorderDark;
   border-left: 5px solid $main-color;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   transition: all 0.3s ease;
 
   &:hover {
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 106, 0, 0.15);
-    border-color: rgba(255, 106, 0, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 212, 170, 0.1);
+    border-color: rgba(0, 212, 170, 0.3);
     transform: translateY(-8px);
   }
 }
@@ -81,7 +81,7 @@
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  color: #1a202c;
+  color: #0f172a;
   position: relative;
   display: block;
   width: 100%;
@@ -101,7 +101,7 @@
 
 .card-subtitle {
   font-size: 1rem;
-  color: #4a5568;
+  color: #475569;
   margin-bottom: 1.5rem;
   line-height: 1.6;
   flex-grow: 1;
@@ -117,8 +117,8 @@
 
 .project-tag {
   background-color: transparent;
-  color: #ff6a00;
-  border: 1.5px solid rgba(255, 106, 0, 0.3);
+  color: $main-color;
+  border: 1.5px solid rgba($main-color, 0.3);
   padding: 0.5rem 1.25rem;
   border-radius: 6px;
   font-size: 0.8rem;
@@ -130,22 +130,23 @@
 }
 
 .project-tag:hover {
-  background-color: #ff6a00;
-  color: #000;
-  box-shadow: 0 0 15px rgba(255, 106, 0, 0.4);
+  background-color: $main-color;
+  color: #0a0f1a;
+  box-shadow: 0 0 15px rgba($main-color, 0.3);
 }
 
 /* Dark mode overrides */
 .dark-mode.card-title {
-  color: white;
+  color: #f1f5f9;
 }
 
 .dark-mode.card-subtitle {
-  color: #cbd5e0;
+  color: #94a3b8;
 }
 
 .dark-mode.project-tag {
   background-color: $main-color;
+  color: #0a0f1a;
 }
 
 @media (max-width: 768px) {

@@ -33,7 +33,7 @@
     top: 50%;
     width: 60px;
     height: 3px;
-    background: linear-gradient(135deg, $main-color 0%, #ff9d00 100%);
+    background: linear-gradient(135deg, $main-color 0%, #00b4d8 100%);
     border-radius: 2px;
 }
 
@@ -45,21 +45,21 @@
     background: $lightBackground2;
     padding: 15px 20px 15px 80px;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
     transition: all 0.3s ease;
 
     &:hover {
         transform: translateX(10px);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     }
 }
 
 .category-title-wrapper.dark-mode {
     background: $darkBackground;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 
     &:hover {
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
     }
 }
 
@@ -124,11 +124,10 @@
     position: absolute;
     left: 0;
     top: -40px;
-    /* Start from top of previous item or category */
     width: 2px;
     height: calc(100% + 20px);
-    background: rgba($main-color, 0.3);
-    box-shadow: 0 0 10px rgba($main-color, 0.2);
+    background: rgba($main-color, 0.2);
+    box-shadow: 0 0 10px rgba($main-color, 0.1);
 
     &.last {
         height: 50%;
@@ -142,13 +141,10 @@
     top: 50%;
     width: 60px;
     height: 2px;
-    background: linear-gradient(90deg, rgba($main-color, 0.3) 0%, $main-color 100%);
+    background: linear-gradient(90deg, rgba($main-color, 0.2) 0%, $main-color 100%);
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
-
-/* Curve effect using a pseudo-element if needed, 
-   but for simplicity, we'll use straight lines with rounded junctions */
 
 .project-dot {
     position: absolute;
@@ -157,17 +153,16 @@
     transform: translateY(-50%);
     width: 10px;
     height: 10px;
-    background: #4fd1c5;
-    /* Teal/Cyan glow from image */
+    background: $main-color;
     border-radius: 50%;
-    box-shadow: 0 0 12px #4fd1c5, 0 0 4px #4fd1c5;
+    box-shadow: 0 0 12px $main-color, 0 0 4px $main-color;
     z-index: 2;
     transition: all 0.3s ease;
 }
 
 .project-item:hover .project-dot {
     transform: translateY(-50%) scale(1.5);
-    box-shadow: 0 0 20px #4fd1c5, 0 0 8px #4fd1c5;
+    box-shadow: 0 0 20px $main-color, 0 0 8px $main-color;
 }
 
 /* Project Card */
@@ -202,21 +197,19 @@
 }
 
 .project-name.dark-mode {
-    color: #e2e8f0;
-    /* Light gray from image */
+    color: #cbd5e1;
 }
 
 .hierarchical-project-card:hover .project-name {
-    color: #4fd1c5;
-    text-shadow: 0 0 8px rgba(79, 209, 197, 0.4);
+    color: $main-color;
+    text-shadow: 0 0 8px rgba(0, 212, 170, 0.3);
 }
 
 .project-description {
     display: none;
-    /* In the image, it looks like just titles are listed in the tree */
 }
 
-/* Social links hidden or simplified for the tree view to match image */
+/* Social links hidden or simplified for the tree view */
 .project-links {
     display: none;
 }
@@ -225,8 +218,8 @@
     display: inline-flex;
     align-items: center;
     padding: 8px 16px;
-    background: linear-gradient(135deg, $main-color 0%, #ff9d00 100%);
-    color: white;
+    background: $primaryGradient;
+    color: #0a0f1a;
     border-radius: 8px;
     font-size: 14px;
     font-weight: 500;
@@ -235,12 +228,12 @@
 
     &:hover {
         transform: translateY(-2px);
-        box-shadow: 0 6px 15px rgba($main-color, 0.4);
+        box-shadow: 0 6px 15px rgba($main-color, 0.35);
     }
 }
 
 .project-link.dark-mode {
-    background: linear-gradient(135deg, $main-color 0%, #ff9d00 100%);
+    background: $primaryGradient;
 }
 
 /* Responsive Design */
@@ -371,19 +364,19 @@
     padding: 40px;
     border-radius: 20px;
     background: rgba($main-color, 0.03);
-    border: 1px dashed rgba($main-color, 0.2);
+    border: 1px dashed rgba($main-color, 0.15);
     transition: all 0.3s ease;
 
     &:hover {
         background: rgba($main-color, 0.05);
-        border-color: rgba($main-color, 0.4);
+        border-color: rgba($main-color, 0.3);
     }
 }
 
 .view-more-text {
     font-family: "Inter", sans-serif;
     font-size: 18px;
-    color: #666;
+    color: #64748b;
     margin-bottom: 25px;
     max-width: 600px;
     line-height: 1.6;
@@ -399,14 +392,14 @@
     gap: 12px;
     padding: 16px 35px;
     background: $main-color;
-    color: white;
+    color: #0a0f1a;
     text-decoration: none;
     border-radius: 12px;
     font-family: "Outfit", sans-serif;
     font-size: 18px;
     font-weight: 600;
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0 10px 25px rgba($main-color, 0.3);
+    box-shadow: 0 10px 25px rgba($main-color, 0.25);
 
     i {
         font-size: 22px;
@@ -414,7 +407,7 @@
 
     &:hover {
         transform: translateY(-5px) scale(1.02);
-        box-shadow: 0 15px 35px rgba($main-color, 0.5);
+        box-shadow: 0 15px 35px rgba($main-color, 0.4);
         background: darken($main-color, 5%);
     }
 
